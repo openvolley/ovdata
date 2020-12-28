@@ -10,6 +10,7 @@
 #' - "stuttgart_schwerin_2018" - (DataVolley) the 2018 women's final (first of 3) from the German Bundesliga, Allianz MTV Stuttgart vs SSC Palmberg Schwerin (file courtesy Michael Mattes)
 #'
 #' @param as string: either "path" (return the path to the file) or "parsed" (parse the file into an R data structure using [datavolley::dv_read()] or [peranavolley::pv_read()]
+#' @param simplify logical: by default if `as` is "parsed", the returned list is the same length as `choice` where each entry is a parsed object. If `simplify` is `TRUE` and we have asked for a single file (i.e. `length(choice) == 1`, then return just that objecty (not a list containing that object)
 #' @return If `as` is "path", a character vector with the file path(s), otherwise a list
 #'
 #' @examples
@@ -21,9 +22,10 @@
 #' summary(x)
 #'
 #' @export
-ovdata_example <- function(choice = "190301_kats_beds", as = "path") {
+ovdata_example <- function(choice = "190301_kats_beds", as = "path", simplify = TRUE) {
     assert_that(is.character(choice))
     assert_that(is.string(as))
+    assert_that(is.flag(simplify), !is.na(simplify))
     as <- tolower(as)
     as <- match.arg(as, c("path", "parsed"))
     out <- rep(NA_character_, length(choice))
@@ -68,6 +70,7 @@ ovdata_example <- function(choice = "190301_kats_beds", as = "path") {
                 do.call(dv_read, c(list(out[i]), this_parms))
             }
         })
+        if (simplify && length(out) == 1) out <- out[[1]]
     }
     out
  }

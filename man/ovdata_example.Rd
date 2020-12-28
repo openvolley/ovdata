@@ -4,7 +4,7 @@
 \alias{ovdata_example}
 \title{Example volleyball match scout files}
 \usage{
-ovdata_example(choice = "190301_kats_beds", as = "path")
+ovdata_example(choice = "190301_kats_beds", as = "path", simplify = TRUE)
 }
 \arguments{
 \item{choice}{string: one or more files to return
@@ -15,10 +15,12 @@ ovdata_example(choice = "190301_kats_beds", as = "path")
 \item "clickscout" - an example Click & Scout DataVolley file
 \item "2017_AVL_mens_HEAT_vs_UTSSU" - (Perana/VBStats) Men's Australian Volleyball League 2017: Canberra Heat vs UTSSU (file courtesy Chau Le)
 \item "2017_AVL_womens_HEAT_vs_UTSSU" - (Perana/VBStats) Women's Australian Volleyball League 2017: Canberra Heat vs UTSSU (file courtesy Chau Le)
-\item "stuttgart_schwerin_2018" - (DataVolley) the 2018 women's final (first of 3) from the German Bundesliga, Allianz MTV Stuttgart vs SSC Palmberg Schwerin
+\item "stuttgart_schwerin_2018" - (DataVolley) the 2018 women's final (first of 3) from the German Bundesliga, Allianz MTV Stuttgart vs SSC Palmberg Schwerin (file courtesy Michael Mattes)
 }}
 
-\item{as}{string: either "path" (return the path to the file) or "parsed" (parse the file into an R data structure using \code{\link[datavolley:read_dv]{datavolley::dv_read()}} or \code{\link[peranavolley:pv_read]{peranavolley::pv_read()}}}
+\item{as}{string: either "path" (return the path to the file) or "parsed" (parse the file into an R data structure using \code{\link[datavolley:dv_read]{datavolley::dv_read()}} or \code{\link[peranavolley:pv_read]{peranavolley::pv_read()}}}
+
+\item{simplify}{logical: by default if \code{as} is "parsed", the returned list is the same length as \code{choice} where each entry is a parsed object. If \code{simplify} is \code{TRUE} and we have asked for a single file (i.e. \code{length(choice) == 1}, then return just that objecty (not a list containing that object)}
 }
 \value{
 If \code{as} is "path", a character vector with the file path(s), otherwise a list
