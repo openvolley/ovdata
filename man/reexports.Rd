@@ -12,7 +12,7 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{datavolley}{\code{\link[datavolley:read_dv]{dv_read}}}
+  \item{datavolley}{\code{\link[datavolley]{dv_read}}}
 
   \item{peranavolley}{\code{\link[peranavolley]{pv_read}}}
 }}
