@@ -20,7 +20,8 @@ remotes::install_github("openvolley/ovdata")
 The `ovdata` package provides example data files and other data
 resources, primarily for use with the openvolley package family.
 
-Data files were contributed by the following people and organisations:
+Data files were contributed by the following people or sourced from the
+following sites:
 
 -   Mark Lebedew
 -   Chau Le (Perana Sports)
