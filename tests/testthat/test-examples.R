@@ -1,7 +1,7 @@
 context("example files")
 
 test_that("example scout files work", {
-    chc <- c("190301_kats_beds", "mlafin_braslovce_nkbm", "pm06", "clickscout", "2017_avl_mens_heat_vs_utssu", "2017_avl_womens_heat_vs_utssu", "stuttgart_schwerin_2018")
+    chc <- c("190301_kats_beds", "mlafin_braslovce_nkbm", "pm06", "clickscout", "2017_avl_mens_heat_vs_utssu", "2017_avl_womens_heat_vs_utssu", "stuttgart_schwerin_2018", "DCup7")
 
     x <- ovdata_example(chc)
     expect_type(x, "character")
