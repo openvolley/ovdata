@@ -1,6 +1,6 @@
 Package: ovdata
 Title: Data Sets For Use With Openvolley Packages
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: c(person("Ben", "Raymond", role = c("aut", "cre"), email = "ben@untan.gl"),
              person("Adrien", "Ickowicz", role = "aut"),
              person("Mark", "Lebedew", role = "ctb"),
