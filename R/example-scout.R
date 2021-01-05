@@ -1,7 +1,8 @@
 #' Example volleyball match scout files
 #'
 #' @param choice string: one or more files to return
-#' - "190301_kats_beds" - a DataVolley file from a match between GKS Katowice and MKS Bedzin during the 2018/19 Polish Plus Liga (file courtesy Mark Lebedew)
+#' - "190301_kats_beds" - the full DataVolley file from a match between GKS Katowice and MKS Bedzin during the 2018/19 Polish Plus Liga (file courtesy Mark Lebedew)
+#' - "190301_kats_beds-clip" - a single rally from the "190301_kats_beds" DataVolley file. This rally corresponds to the video clip contained in `ovdata_example_video("190301_kats_beds")`
 #' - "PM06" - (DataVolley) the December 2012 men's Slovenian national championship semifinal between ACH Volley and Maribor (file from <http://www.odbojka.si/>)
 #' - "mlafin_braslovce_nkbm" - (DataVolley) the January 2015 Slovenian junior women's final between Braslovče and Nova KBM Branik (file from <http://www.odbojka.si/>)
 #' - "clickscout" - an example Click & Scout DataVolley file
@@ -13,6 +14,8 @@
 #' @param as string: either "path" (return the path to the file) or "parsed" (parse the file into an R data structure using [datavolley::dv_read()] or [peranavolley::pv_read()]
 #' @param simplify logical: by default if `as` is "parsed", the returned list is the same length as `choice` where each entry is a parsed object. If `simplify` is `TRUE` and we have asked for a single file (i.e. `length(choice) == 1`, then return just that objecty (not a list containing that object)
 #' @return If `as` is "path", a character vector with the file path(s), otherwise a list
+#'
+#' @seealso [ovdata_example_video()]
 #'
 #' @examples
 #' myfile <- ovdata_example()
@@ -35,6 +38,9 @@ ovdata_example <- function(choice = "190301_kats_beds", as = "path", simplify = 
         switch(tolower(choice[i]),
                "190301_kats_beds" = {
                    out[i] <- system.file("extdata/scout/&190301_kats_beds.dvw", package = "ovdata")
+               },
+               "190301_kats_beds-clip" = {
+                   out[i] <- system.file("extdata/scout/&190301_kats_beds-clip.dvw", package = "ovdata")
                },
                "mlafin_braslovce_nkbm" = {
                    out[i] <- system.file("extdata/scout/mlafin_braslovce_nkbm.dvw", package = "ovdata")

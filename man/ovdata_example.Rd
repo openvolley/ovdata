@@ -9,7 +9,8 @@ ovdata_example(choice = "190301_kats_beds", as = "path", simplify = TRUE)
 \arguments{
 \item{choice}{string: one or more files to return
 \itemize{
-\item "190301_kats_beds" - a DataVolley file from a match between GKS Katowice and MKS Bedzin during the 2018/19 Polish Plus Liga (file courtesy Mark Lebedew)
+\item "190301_kats_beds" - the full DataVolley file from a match between GKS Katowice and MKS Bedzin during the 2018/19 Polish Plus Liga (file courtesy Mark Lebedew)
+\item "190301_kats_beds-clip" - a single rally from the "190301_kats_beds" DataVolley file. This rally corresponds to the video clip contained in \code{ovdata_example_video("190301_kats_beds")}
 \item "PM06" - (DataVolley) the December 2012 men's Slovenian national championship semifinal between ACH Volley and Maribor (file from \url{http://www.odbojka.si/})
 \item "mlafin_braslovce_nkbm" - (DataVolley) the January 2015 Slovenian junior women's final between Braslovče and Nova KBM Branik (file from \url{http://www.odbojka.si/})
 \item "clickscout" - an example Click & Scout DataVolley file
@@ -37,4 +38,7 @@ summary(x)
 x <- ovdata_example("clickscout", as = "parsed")
 summary(x)
 
+}
+\seealso{
+\code{\link[=ovdata_example_video]{ovdata_example_video()}}
 }
