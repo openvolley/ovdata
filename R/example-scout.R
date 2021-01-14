@@ -12,7 +12,7 @@
 #' - "DCup7" - the 2020 Austrian Women's Volley Cup played between Hartberg and UVC Graz (file from <https://www.volleynet.at/dvdownload/information/f-Damen/>)
 
 #' @param as string: either "path" (return the path to the file) or "parsed" (parse the file into an R data structure using [datavolley::dv_read()] or [peranavolley::pv_read()]
-#' @param simplify logical: by default if `as` is "parsed", the returned list is the same length as `choice` where each entry is a parsed object. If `simplify` is `TRUE` and we have asked for a single file (i.e. `length(choice) == 1`, then return just that objecty (not a list containing that object)
+#' @param simplify logical: by default if `as` is "parsed", the returned list is the same length as `choice` where each entry is a parsed object. If `simplify` is `TRUE` and we have asked for a single file (i.e. `length(choice) == 1`, then return just that object (not a list containing that object)
 #' @return If `as` is "path", a character vector with the file path(s), otherwise a list
 #'
 #' @seealso [ovdata_example_video()]
