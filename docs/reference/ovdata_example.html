@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ovdata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -80,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -120,7 +120,8 @@
     <tr>
       <th>choice</th>
       <td><p>string: one or more files to return</p><ul>
-<li><p>"190301_kats_beds" - a DataVolley file from a match between GKS Katowice and MKS Bedzin during the 2018/19 Polish Plus Liga (file courtesy Mark Lebedew)</p></li>
+<li><p>"190301_kats_beds" - the full DataVolley file from a match between GKS Katowice and MKS Bedzin during the 2018/19 Polish Plus Liga (file courtesy Mark Lebedew)</p></li>
+<li><p>"190301_kats_beds-clip" - a single rally from the "190301_kats_beds" DataVolley file. This rally corresponds to the video clip contained in <code><a href='ovdata_example_video.html'>ovdata_example_video("190301_kats_beds")</a></code></p></li>
 <li><p>"PM06" - (DataVolley) the December 2012 men's Slovenian national championship semifinal between ACH Volley and Maribor (file from <a href='http://www.odbojka.si/'>http://www.odbojka.si/</a>)</p></li>
 <li><p>"mlafin_braslovce_nkbm" - (DataVolley) the January 2015 Slovenian junior women's final between Braslovče and Nova KBM Branik (file from <a href='http://www.odbojka.si/'>http://www.odbojka.si/</a>)</p></li>
 <li><p>"clickscout" - an example Click &amp; Scout DataVolley file</p></li>
@@ -136,13 +137,16 @@
     </tr>
     <tr>
       <th>simplify</th>
-      <td><p>logical: by default if <code>as</code> is "parsed", the returned list is the same length as <code>choice</code> where each entry is a parsed object. If <code>simplify</code> is <code>TRUE</code> and we have asked for a single file (i.e. <code>length(choice) == 1</code>, then return just that objecty (not a list containing that object)</p></td>
+      <td><p>logical: by default if <code>as</code> is "parsed", the returned list is the same length as <code>choice</code> where each entry is a parsed object. If <code>simplify</code> is <code>TRUE</code> and we have asked for a single file (i.e. <code>length(choice) == 1</code>, then return just that object (not a list containing that object)</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>If <code>as</code> is "path", a character vector with the file path(s), otherwise a list</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='ovdata_example_video.html'>ovdata_example_video()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='va'>myfile</span> <span class='op'>&lt;-</span> <span class='fu'>ovdata_example</span><span class='op'>(</span><span class='op'>)</span>
