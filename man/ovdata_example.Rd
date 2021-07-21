@@ -20,7 +20,7 @@ ovdata_example(choice = "190301_kats_beds", as = "path", simplify = TRUE)
 \item "DCup7" - the 2020 Austrian Women's Volley Cup played between Hartberg and UVC Graz (file from \url{https://www.volleynet.at/dvdownload/information/f-Damen/})
 }}
 
-\item{as}{string: either "path" (return the path to the file) or "parsed" (parse the file into an R data structure using \code{\link[datavolley:read_dv]{datavolley::dv_read()}} or \code{\link[peranavolley:pv_read]{peranavolley::pv_read()}}}
+\item{as}{string: either "path" (return the path to the file) or "parsed" (parse the file into an R data structure using \code{\link[datavolley:dv_read]{datavolley::dv_read()}} or \code{\link[peranavolley:pv_read]{peranavolley::pv_read()}}}
 
 \item{simplify}{logical: by default if \code{as} is "parsed", the returned list is the same length as \code{choice} where each entry is a parsed object. If \code{simplify} is \code{TRUE} and we have asked for a single file (i.e. \code{length(choice) == 1}, then return just that object (not a list containing that object)}
 }

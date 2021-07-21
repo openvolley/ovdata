@@ -1,6 +1,6 @@
 Package: ovdata
 Title: Data Sets For Use With Openvolley Packages
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Ben", "Raymond", role = c("aut", "cre"), email = "ben@untan.gl"),
              person("Adrien", "Ickowicz", role = "aut"),
              person("Mark", "Lebedew", role = "ctb"),
@@ -11,7 +11,7 @@ Description: Example data files and other data resources, primarily for use with
 Depends: R (>= 3.3.0)
 Imports:
   assertthat,
-  datavolley,
+  datavolley (>= 1.0.2),
   peranavolley
 Suggests:
   testthat
