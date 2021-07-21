@@ -25,7 +25,11 @@ knitr::opts_chunk$set(
 ## Installation
 
 ``` r
-## install.packages("remotes")
+install.packages("ovdata", repos = "https://openvolley.r-universe.dev")
+
+## or
+
+## install.packages("remotes") ## if needed
 remotes::install_github("openvolley/ovdata")
 ```
 

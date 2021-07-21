@@ -15,7 +15,11 @@ status](https://github.com/openvolley/ovdata/workflows/R-CMD-check/badge.svg)](h
 ## Installation
 
 ``` r
-## install.packages("remotes")
+install.packages("ovdata", repos = "https://openvolley.r-universe.dev")
+
+## or
+
+## install.packages("remotes") ## if needed
 remotes::install_github("openvolley/ovdata")
 ```
 
