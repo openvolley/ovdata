@@ -30,4 +30,6 @@ test_that("example scout files work", {
     chk <- unique(chk[chk$skill == "Block", c("evaluation_code", "evaluation")])
     expect_equal(chk$evaluation[which(chk$evaluation_code == "=")], "Invasion")
     expect_equal(chk$evaluation[which(chk$evaluation_code == "/")], "Error")
+
+    x <- ovdata_example("NCA-CUB", as = "parsed")
 })

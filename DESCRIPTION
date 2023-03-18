@@ -1,11 +1,12 @@
 Package: ovdata
 Title: Data Sets For Use With Openvolley Packages
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(person("Ben", "Raymond", role = c("aut", "cre"), email = "ben@untan.gl"),
              person("Adrien", "Ickowicz", role = "aut"),
              person("Mark", "Lebedew", role = "ctb"),
              person("Chau", "Le", role = "ctb"),
              person("Michael", "Mattes", role = "ctb"),
+             person("Christophe", "Elek", role = "ctb"),
              person("openvolley.org", role = "org"))
 Description: Example data files and other data resources, primarily for use with the openvolley package family.
 Depends: R (>= 3.3.0)
@@ -19,5 +20,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
 Remotes: openvolley/datavolley, openvolley/peranavolley

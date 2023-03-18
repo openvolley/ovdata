@@ -15,7 +15,9 @@ status](https://github.com/openvolley/ovdata/workflows/R-CMD-check/badge.svg)](h
 ## Installation
 
 ``` r
-install.packages("ovdata", repos = "https://openvolley.r-universe.dev")
+options(repos = c(openvolley = "https://openvolley.r-universe.dev",
+                  CRAN = "https://cloud.r-project.org"))
+install.packages("ovdata")
 
 ## or
 
@@ -32,4 +34,5 @@ following sites:
 -   Mark Lebedew
 -   Chau Le (Perana Sports)
 -   Michael Mattes
+-   Christophe Elek
 -   <http://www.odbojka.si/>

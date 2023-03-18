@@ -10,6 +10,7 @@
 #' - "2017_AVL_womens_HEAT_vs_UTSSU" - (Perana/VBStats) Women's Australian Volleyball League 2017: Canberra Heat vs UTSSU (file courtesy Chau Le)
 #' - "stuttgart_schwerin_2018" - (DataVolley) the 2018 women's final (first of 3) from the German Bundesliga, Allianz MTV Stuttgart vs SSC Palmberg Schwerin (file courtesy Michael Mattes)
 #' - "DCup7" - the 2020 Austrian Women's Volley Cup played between Hartberg and UVC Graz (file from <https://www.volleynet.at/dvdownload/information/f-Damen/>)
+#' - "NCA-CUB" - Nicaragua vs Cuba women from the Pan American Cup, August 2022 (vsm format, courtesy Christophe Elek)
 
 #' @param as string: either "path" (return the path to the file) or "parsed" (parse the file into an R data structure using [datavolley::dv_read()] or [peranavolley::pv_read()]
 #' @param simplify logical: by default if `as` is "parsed", the returned list is the same length as `choice` where each entry is a parsed object. If `simplify` is `TRUE` and we have asked for a single file (i.e. `length(choice) == 1`, then return just that object (not a list containing that object)
@@ -63,6 +64,9 @@ ovdata_example <- function(choice = "190301_kats_beds", as = "path", simplify = 
                },
                "dcup7" = {
                    out[i] <- system.file("extdata/scout/&DCup-7.dvw", package = "ovdata")
+               },
+               "nca-cub" = {
+                   out[i] <- system.file("extdata/scout/2022-08-23_NCA-CUB.vsm", package = "ovdata")
                },
                stop("unrecognized 'choice' value (", choice[i], ")")
                )

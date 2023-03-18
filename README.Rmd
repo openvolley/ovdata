@@ -25,7 +25,9 @@ knitr::opts_chunk$set(
 ## Installation
 
 ``` r
-install.packages("ovdata", repos = "https://openvolley.r-universe.dev")
+options(repos = c(openvolley = "https://openvolley.r-universe.dev",
+                  CRAN = "https://cloud.r-project.org"))
+install.packages("ovdata")
 
 ## or
 
@@ -41,5 +43,6 @@ Data files were contributed by the following people or sourced from the followin
 - Mark Lebedew
 - Chau Le (Perana Sports)
 - Michael Mattes
+- Christophe Elek
 - http://www.odbojka.si/
 
